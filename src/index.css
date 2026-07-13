@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Manrope:wght@200..800&family=Montenegrin+Gothic+One&family=Moon+Dance&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Share+Tech&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Unbounded:wght@200..900&display=swap');
+
+@import "tailwindcss";
+
+
+.unbounded {
+    font-family: "Unbounded", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Stopping selection */
+
+.no-select {
+    user-select: none;
+}
+
+.black-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.no-scrollBar::-webkit-scrollbar {
+    display: none;
+}
