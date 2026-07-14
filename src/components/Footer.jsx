@@ -9,7 +9,7 @@ const Footer = () => {
                 <div className='w-full'>
                     <p className='flex items-center gap-1 sm:text-sm text-xs tracking-tighter'>
                         <FaRegCopyright />
-                        <span>2026 MealGo Limited</span>
+                        <span>2026 MealGo Limited, All right Reserved</span>
                     </p>
                 </div>
             </div>
