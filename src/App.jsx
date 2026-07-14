@@ -5,6 +5,8 @@ import Category from './components/Category';
 import TopRestaurant from './components/TopRestaurant';
 import TopCards from './components/TopCards';
 import OnlineDelv from './components/OnlineDelv';
+import GetApp from './components/GetApp';
+import Footer from './components/Footer';
 
 const App = () => {
 
@@ -14,6 +16,7 @@ const App = () => {
             <Category />
             <TopRestaurant />
             <OnlineDelv />
+            <GetApp />
         </>
     )
 }

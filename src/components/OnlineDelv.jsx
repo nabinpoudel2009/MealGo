@@ -21,7 +21,7 @@ const OnlineDelv = () => {
         <section className='max-w-7xl mx-auto mt-5 px-2'>
             <div className='flex gap-3 items-center justify-between'>
                 <div>
-                    <h3 className='font-bold text-lg md:text-2xl'>Restaurant with online delivery in Nepal</h3>
+                    <h3 className='font-bold text-lg md:text-3xl'>Restaurant with online delivery in Nepal</h3>
                 </div>
             </div>
             <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-center gap-4'>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { RiDiscountPercentLine } from "react-icons/ri";
 import { FaRegUser } from "react-icons/fa";
 import { BsCartDash } from "react-icons/bs";
@@ -7,6 +7,7 @@ import { FiHelpCircle } from "react-icons/fi";
 import Search from './Search';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
+import { LocationContext } from "../context/LocationContext";
 
 const NavLinks = [
     {
@@ -34,7 +35,8 @@ const NavLinks = [
 
 const Nav = () => {
 
-    const [toggle, setToggle] = useState(false)
+    const [toggle, setToggle] = useState(false);
+    const { selectedLocation, setSelectedLocation } = useContext(LocationContext);
 
     const showToggle = () => {
         setToggle(true)
@@ -62,7 +64,41 @@ const Nav = () => {
                         left: toggle ? '0%' : '-100%'
                     }}
                 >
-                
+                    <div className='p-3'>
+                        <h3 className='text-[1.3rem] sm:text-3xl unbounded no-select'>
+                            <span className='text-orange-500 font-semibold'>M</span>eal<span className='text-orange-500 font-semibold'>G</span>o
+                        </h3>
+                        <hr className='text-orange-500' />
+                        <div className='mt-5'>
+                            <ul>
+                                {NavLinks.map((link, key) => 
+                                    <div 
+                                        key={key}
+                                        className=''                                   
+                                    >
+                                        <li className=''>{link.title}</li>
+                                    </div>
+                                )}
+                            </ul>
+                        </div>
+                        <div className='mt-5 grid gap-2'>
+                            <h3 className='text-orange-500 font-bold'>Set Your Location</h3>
+                            <select 
+                                name="Location"
+                                className='bg-neutral-200/60 p-1 rounded-md'
+                                id="location"
+                                value={selectedLocation}
+                                onChange={(e) => setSelectedLocation(e.target.value)}
+                            >
+                                <option value="Kathmandu">Kathmandu</option>
+                                <option value="Jhapa">Jhapa</option>
+                                <option value="Pokhara">Pokhara</option>
+                                <option value="Waling">Waling</option>
+                                <option value="Butwal">Butwal</option>
+                                <option value="Narayangadh">Narayangadh</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
             </div>
             <nav className='w-full shadow-lg z-500 p-2 sm:p-3 sticky top-0 bg-white'>
@@ -72,7 +108,7 @@ const Nav = () => {
                             <span className='text-orange-500 font-semibold'>M</span>eal<span className='text-orange-500 font-semibold'>G</span>o
                         </h3>
                         <h3 className='cursor-pointer flex items-center gap-x-1 text-xs sm:text-sm md:text-base'>
-                            <span className='font-semibold text-xs border-b border-orange-500'>Narayangadh, </span>
+                            <span className='font-semibold text-xs sm:text-base border-b border-orange-500'> {selectedLocation}, </span>
                             Nepal
                             <PiCaretDownBold 
                                 className='text-xl transition-colors hover:fill-orange-500'
