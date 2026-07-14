@@ -46,7 +46,7 @@ const Nav = () => {
     return (
         <>
             <div 
-                className='h-full z-90 w-full bg-black/60 fixed duration-300'
+                className='h-full z-900 w-full bg-black/60 fixed duration-300'
                 onClick={hideToggle}
                 style={{
                     opacity: toggle ? 1 : 0,
@@ -65,8 +65,8 @@ const Nav = () => {
                 
                 </div>
             </div>
-            <nav className='w-full shadow-md p-2 sm:p-3'>
-                <div className='max-w-7xl mx-auto'>
+            <nav className='w-full shadow-lg z-500 p-2 sm:p-3 sticky top-0 bg-white'>
+                <div className='max-w-7xl mx-auto py-2'>
                     <div className='flex items-center justify-center gap-x-3 sm:gap-x-10 w-full'>
                         <h3 className='text-[1.3rem] sm:text-3xl unbounded no-select'>
                             <span className='text-orange-500 font-semibold'>M</span>eal<span className='text-orange-500 font-semibold'>G</span>o
